@@ -1,0 +1,24 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: employee-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/userdb
+    username: root
+    password: Ishan,1998
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: https://discovery-server-ishi-31114c085ec3.herokuapp.com/eureka
